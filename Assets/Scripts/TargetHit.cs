@@ -4,18 +4,34 @@ public class TargetHit : MonoBehaviour
 {
     public ParticleSystem hitParticles;
 
+    private bool hasBeenHit = false;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (hasBeenHit || !collision.gameObject.CompareTag("Bullet"))
+            return;
+
+        hasBeenHit = true;
+
+        Destroy(collision.gameObject);
+
+        if (hitParticles != null)
         {
-            Debug.Log("CIBLE TOUCHEE");
-
-            if (hitParticles != null)
-            {
-                hitParticles.Play();
-            }
-
-            Destroy(collision.gameObject);
+            hitParticles.Play();
         }
+
+        Renderer targetRenderer = GetComponent<Renderer>();
+        if (targetRenderer != null)
+        {
+            targetRenderer.enabled = false;
+        }
+
+        Collider targetCollider = GetComponent<Collider>();
+        if (targetCollider != null)
+        {
+            targetCollider.enabled = false;
+        }
+
+        Destroy(gameObject, 0.8f);
     }
 }
