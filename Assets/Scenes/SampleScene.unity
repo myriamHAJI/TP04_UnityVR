@@ -1064,7 +1064,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -1132,7 +1132,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0.4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1185,7 +1185,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1303,7 +1303,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.08
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -6972,6 +6972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d01af5059727430593edac48244b5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetHit
+  hitParticles: {fileID: 1024209384}
 --- !u!1 &1670751026
 GameObject:
   m_ObjectHideFlags: 0
