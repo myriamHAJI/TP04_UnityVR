@@ -1614,15 +1614,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3367501549380815612, guid: 2ce45a73a3c3c9c408a26a61b349f40b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7439786
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3367501549380815612, guid: 2ce45a73a3c3c9c408a26a61b349f40b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.08549524
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3367501549380815612, guid: 2ce45a73a3c3c9c408a26a61b349f40b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.386354
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3367501549380815612, guid: 2ce45a73a3c3c9c408a26a61b349f40b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1668,6 +1668,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2733707503699988550, guid: 2ce45a73a3c3c9c408a26a61b349f40b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1342341168}
+    - targetCorrespondingSourceObject: {fileID: 2733707503699988550, guid: 2ce45a73a3c3c9c408a26a61b349f40b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1342341172}
   m_SourcePrefab: {fileID: 100100000, guid: 2ce45a73a3c3c9c408a26a61b349f40b, type: 3}
 --- !u!1 &1342341167 stripped
 GameObject:
@@ -1739,7 +1742,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1342341172}
+        m_TargetAssemblyTypeName: GunShoot, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -1826,7 +1841,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1857,6 +1872,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3367501549380815612, guid: 2ce45a73a3c3c9c408a26a61b349f40b, type: 3}
   m_PrefabInstance: {fileID: 1342341166}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1342341172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342341167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf98fe7cffd1c4fb996ed1c4a0510462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GunShoot
+  bulletPrefab: {fileID: 6883626915156956476, guid: f474ac7004beb442eb6622a08f0f1ee8, type: 3}
+  muzzlePoint: {fileID: 110569036}
+  bulletSpeed: 15
+  bulletLifetime: 5
+  useGravity: 1
 --- !u!1 &1512488542
 GameObject:
   m_ObjectHideFlags: 0

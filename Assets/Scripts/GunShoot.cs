@@ -11,8 +11,13 @@ public class GunShoot : MonoBehaviour
 
     public void Shoot()
     {
+        Debug.Log("TIR OK");
+
         if (bulletPrefab == null || muzzlePoint == null)
+        {
+            Debug.LogWarning("Bullet Prefab ou Muzzle Point manquant.");
             return;
+        }
 
         GameObject bullet = Instantiate(
             bulletPrefab,
