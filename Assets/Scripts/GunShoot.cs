@@ -30,7 +30,7 @@ public class GunShoot : MonoBehaviour
         if (rb != null)
         {
             rb.useGravity = useGravity;
-            rb.linearVelocity = muzzlePoint.forward * bulletSpeed;
+            rb.AddForce(muzzlePoint.forward * bulletSpeed, ForceMode.VelocityChange);
         }
 
         Destroy(bullet, bulletLifetime);
