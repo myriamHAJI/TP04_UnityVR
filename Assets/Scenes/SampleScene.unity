@@ -2608,6 +2608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TargetSpawner
   targetPrefab: {fileID: 7920505400905857894, guid: db0b1c1398f8c47cc94c058a7df069e6, type: 3}
   spawnInterval: 3
+  targetLifetime: 5
   minX: -2
   maxX: 2
   minY: 0.8
